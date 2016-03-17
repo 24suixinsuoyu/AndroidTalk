@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="pers.suixinsuoyu.learnbroadcastreceiver"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="pers.suixinsuoyu.learnbroadcastreceiver.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="pers.suixinsuoyu.learnbroadcastreceiver.MyReceiver">
+            <intent-filter android:priority="5">
+                <action android:name="com.jikexueyuan.learnbroadcastreceiver.intent.action.MyReceiver"/>
+            </intent-filter>
+        </receiver>
+
+
+        <receiver android:name="pers.suixinsuoyu.learnbroadcastreceiver.MyReceiver1">
+            <intent-filter android:priority="10">
+                <action android:name="com.jikexueyuan.learnbroadcastreceiver.intent.action.MyReceiver"/>
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>
